@@ -1,3 +1,4 @@
+using BlogApi.Configs;
 using BlogApi.Data;
 using BlogApi.SeedData;
 using Microsoft.AspNetCore.Identity;
@@ -30,7 +31,6 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>(opt =>
     .AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.Configure<SecurityStampValidatorOptions>(opt => opt.ValidationInterval = TimeSpan.Zero);
-
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
@@ -49,9 +49,9 @@ using (var scope = app.Services.CreateScope())
 }
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+
 
 app.MapControllers();
 app.MapGroup("Auth").MapIdentityApi<IdentityUser>().WithTags("Auth");
-
+MappingConfig.RegisterMappings();
 app.Run();

@@ -4,8 +4,8 @@ namespace BlogApi.Models.DTOs.Comment;
 
 public class CommentDto
 {
-    public string AuthorName { get; set; }
+    public string AuthorName { get; set; } // yorumu yazan kişi
     public string Content { get; set; } // yorum 
-    public List<ReportCommentDto> ReportComments { get; set; }
-    public DateTime CreatedAt { get; set; }
+    public List<ReportCommentDto> ReportComments { get; set; } //  birden fazla raporlanmış yorumu tutan listedir.
+    public DateTime CreatedAt { get; set; } = DateTime.Now;
 }

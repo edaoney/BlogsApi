@@ -2,7 +2,7 @@ namespace BlogApi.Models;
 
 public enum BlogStatus
 {
-    Pending,
-    Approved,
-    Rejected,
+    Pending, // beklemede
+    Approved, // onaylandı
+    Rejected, // reddedildi
 }

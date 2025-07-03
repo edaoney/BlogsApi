@@ -10,6 +10,7 @@ public class Comment
     public IdentityUser Author { get; set; }
     public int BlogId { get; set; }// blog yazısı ıd
     public Blog Blog { get; set; }
+    public ICollection<Report> Reports { get; set; }
     public DateTime Created { get; set; } = DateTime.Now;
     public DateTime Updated { get; set; } 
     

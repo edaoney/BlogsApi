@@ -1,3 +1,5 @@
+using BlogApi.Models.DTOs.Comment;
+
 namespace BlogApi.Models.DTOs.Blog;
 
 public class BlogStatusList
